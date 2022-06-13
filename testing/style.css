@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+/* .grid{
+    height: 256px;
+    width: 312px;
+} */
+
+.grid-container {
+  --gap: 2px;
+  --num-cols: 4;
+  --row-height: 256px;
+
+  box-sizing: border-box;
+  padding: 5px 10px;
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.grid-container > .grid {
+    width: 100%;
+    height: 100%;
+}
